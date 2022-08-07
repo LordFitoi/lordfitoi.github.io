@@ -1,0 +1,7 @@
+{
+  "../../../vue_frontend/src/app/main.js": {
+    "file": "contacts.js",
+    "src": "../../../vue_frontend/src/app/main.js",
+    "isEntry": true
+  }
+}

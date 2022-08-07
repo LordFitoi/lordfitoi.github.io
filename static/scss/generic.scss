@@ -1,0 +1,246 @@
+* {
+    font-family: 'Lato', serif;
+    color: $global-text-color-light;
+    line-height: 1.25em;
+    font-size: 16px;
+}
+html, body, h1, h2, h3, p { margin: 0; }
+a { text-decoration: none; }
+button, a, input {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+
+    & img {
+        filter:
+            invert(43%)
+            sepia(0%)
+            saturate(0%)
+            hue-rotate(150deg)
+            brightness(99%)
+            contrast(88%);
+    }
+    & img:hover {
+        filter:
+            invert(60%)
+            sepia(33%)
+            saturate(5944%)
+            hue-rotate(311deg)
+            brightness(100%)
+            contrast(102%);
+    }
+
+    &:hover { background-color: $global-primary-color-light; }
+    &:active { background-color: $global-primary-color-dark; }
+}
+
+/* CONTAINER */
+/* --------------------------------------- */
+.container {
+    max-width: 1024px;
+}
+
+/* POINTER */
+/* --------------------------------------- */
+.cursor-pointer { cursor: pointer; }
+
+/* TEXT-SIZES */
+/* --------------------------------------- */
+.font-xs { font-size: 0.694rem; }
+.font-sm { font-size: 0.833rem; }
+.font-base { font-size: 1rem; }
+.font-md { font-size: 1.2rem; }
+.font-lg { font-size: 1.44rem; }
+.font-xl { font-size: 1.728rem; }
+
+/* FILTERS */
+/* --------------------------------------- */
+.filter-primary-light {
+    filter:
+        invert(43%)
+        sepia(0%)
+        saturate(0%)
+        hue-rotate(150deg)
+        brightness(99%)
+        contrast(88%);
+}
+.filter-secondary-light {
+    filter:
+        invert(60%)
+        sepia(33%)
+        saturate(5944%)
+        hue-rotate(311deg)
+        brightness(100%)
+        contrast(102%);
+}
+
+/* DISPLAY */
+/* --------------------------------------- */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.grid { display: grid; }
+.inline { display: inline; }
+
+/* ALIGN */
+/* --------------------------------------- */
+.justify-end { justify-content: end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.items-center { align-items: center; }
+.text-start { text-align: start; }
+
+/* CHILD NODES */
+.show-on {
+    & .it-child { opacity: 0; }
+    &:hover .it-child { opacity: 1; }
+}
+
+/* COLORS */
+/* --------------------------------------- */
+.text-light { color: $global-text-color-light; }
+.text-dark { color: $global-text-color-dark; }
+.text-blue { color: $global-color-blue; }
+.text-red { color: $global-color-red; }
+
+.bg-white { background-color: #ffffff; }
+
+.bg-primary { background-color: $global-primary-color; }
+.bg-primary-dark { background-color: $global-primary-color-dark; }
+.bg-primary-light { background-color: $global-primary-color-light; }
+.bg-secondary { background-color: $global-secondary-color; }
+.bg-secondary-dark { background-color: $global-secondary-color-dark; }
+.bg-secondary-light { background-color: $global-secondary-color-light; }
+
+/* TEXT ALIGN */
+/* --------------------------------------- */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* FONT WEIGHT */
+/* --------------------------------------- */
+.font-base { font-weight: 400; }
+.font-bold { font-weight: 700; }
+
+/* BORDERS */
+/* --------------------------------------- */
+.border { border: 1px solid; }
+.border-none { border: none; }
+.border-primary { border-color: $global-primary-color-light; }
+.border-secondary { border-color: $global-secondary-color-light; }
+.rounded-full { border-radius: 50%; }
+
+/* MARGIN */
+/* --------------------------------------- */
+.mx-auto { margin: 0 auto; }
+.mt-auto { margin-top: auto; }
+
+/* TEXT */
+/* --------------------------------------- */
+.text-nowrap {
+    white-space: nowrap;
+}
+/* SIZES */
+/* --------------------------------------- */
+.w-full { width: 100%; }
+.h-max { height: max-content; }
+.w-max { width: max-content; }
+.w-screen { width: 100vw; }
+.h-screen { height: 100vh; }
+.h-full { height: 100%; }
+
+.max-w-xs { max-width: 20rem };
+.max-w-sm { max-width: 24rem };
+.max-w-md { max-width: 28rem };
+.max-w-lg { max-width: 32rem };
+
+.top-1d2 { top: 50%; }
+.left-1d2 { left: 50%; }
+
+/* SHADOWS */
+/* --------------------------------------- */
+.shadow-sm { box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); }
+
+/* OVERFLOW */
+/* --------------------------------------- */
+.overflow-hidden { overflow: hidden }
+
+/* POSITION */
+/* --------------------------------------- */
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+/* TRANSFORM */
+/* --------------------------------------- */
+.translate-center { transform: translate(-50%, -50%); }
+
+/* dividers */
+/* --------------------------------------- */
+.divide-y-primary > * {
+    border-bottom: 2px solid;
+    border-color: $global-primary-color-light;
+}
+.divide-y-white > * {
+    border-bottom: 2px solid;
+    border-color: $global-text-color-light;
+}
+
+
+
+/* SCALED */
+/* --------------------------------------- */
+@for $i from 0 through 16 {
+    .gap-#{$i} {
+        gap: $global-spacing * $i;
+    }
+    .w-#{$i} {
+        width: $global-spacing * $i;
+    }
+    .h-#{$i} {
+        height: $global-spacing * $i;
+    }
+    .min-h-#{$i} {
+        min-height: $global-minmax-spacing * $i;
+    }
+    .px-#{$i} {
+        padding-left: $global-spacing * $i;
+        padding-right: $global-spacing * $i;
+    }
+    .py-#{$i} {
+        padding-top: $global-spacing * $i;
+        padding-bottom: $global-spacing * $i;
+    }
+    .mt-#{$i} {
+        margin-top: $global-spacing * $i;
+    }
+    .mb-#{$i} {
+        margin-bottom: $global-spacing * $i;
+    }
+    .rounded-#{$i} {
+        border-radius: $global-spacing * $i;
+    }
+
+    /* NO ZERO VALUES */
+    @if $i > 0 {
+        .w-1d#{$i} {
+            width: 100% * (1 / $i);
+        }
+        .grid-col-#{$i} {
+            grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+        .col-start-#{$i} {
+            grid-column-start: $i;
+        }
+        .col-span-#{$i} {
+            grid-column: span $i / span $i;
+        }
+        .col-span-sub-#{$i} {
+            grid-column-start: $i + 1;
+            grid-column-end: 13 - $i;
+        }
+    } 
+}

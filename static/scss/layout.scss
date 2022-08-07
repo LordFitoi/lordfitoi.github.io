@@ -1,0 +1,119 @@
+button {
+    cursor: pointer;
+}
+
+nav {
+    & a {
+        &:hover {
+            & p { color: $global-text-color-dark; }
+            background-color: $global-secondary-color-light;
+        }
+        &.active {
+            & p { color: $global-text-color-dark; }
+            background-color: $global-secondary-color;
+        }
+    }
+}
+
+/* FORM */
+/* --------------------------------------- */
+.form, form {
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    input:-internal-autofill-selected {
+        background-color: transparent;
+        padding: 2*$global-spacing;
+        border: 1px solid $global-primary-color-light;
+        border-radius: $global-spacing;
+    }
+    option {
+        color: $global-text-color-dark;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+}
+
+
+/* DROPDOWN */
+/* --------------------------------------- */
+button.dropdown {
+    & ~ .dropdown-container { display: none; }
+    &:focus ~ .dropdown-container,
+    & ~ .dropdown-container:hover {
+        display: flex;
+    }
+}
+
+/* BOXES */
+/* --------------------------------------- */
+.box {
+    background-color:  $global-primary-color;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+
+/* SHEET LIST */
+/* --------------------------------------- */
+.category-list > * {
+    @include CategoryListText;
+    &:last-child {
+        color: transparent;
+    }
+}
+
+.item-list > * {
+    @include ItemListText;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.item-list {
+    cursor: pointer;
+
+    &:hover {
+        background-color: $global-primary-color-light;
+
+        button img {
+            filter:
+                invert(10%)
+                sepia(1%)
+                saturate(1060%)
+                hue-rotate(314deg)
+                brightness(95%)
+                contrast(79%);
+
+            &:hover {
+                filter:
+                    invert(60%)
+                    sepia(33%)
+                    saturate(5944%)
+                    hue-rotate(311deg)
+                    brightness(100%)
+                    contrast(102%);
+            }
+        }
+    }
+}
+
+/* MODAL */
+/* --------------------------------------- */
+.modal-container {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000087;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+
+    &.active { display: flex; }
+}

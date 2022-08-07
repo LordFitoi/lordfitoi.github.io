@@ -1,0 +1,24 @@
+@mixin CommonLineHeight {
+    line-height: 1.2em;
+}
+
+@mixin HeaderHeading {
+    @include CommonLineHeight;
+    font-size: 32px;
+}
+
+@mixin BlockHeading {
+    @include CommonLineHeight;
+    font-size: 24px;
+}
+
+@mixin CategoryListText {
+    @include CommonLineHeight;
+    font-size: 12px;
+}
+
+@mixin ItemListText {
+    @include CommonLineHeight;
+    font-size: 16px;
+    font-weight: 400;
+}

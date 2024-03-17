@@ -1,0 +1,14 @@
+---
+import WebShowcase from './WebShowcase.astro';
+const { imgSrc, imgAlt } = Astro.props;
+
+---
+
+<div class="grow grid grid-cols-3 w-full">
+    <div class="flex flex-col items-center justify-center py-[32px] lg:py-[60px] col-span-3 lg:col-span-1">
+        <slot></slot>
+    </div>
+    <div class="p-[20px] lg:p-[32px] rounded-l-full bg-[#FFF] col-span-3 lg:col-span-2">
+        <WebShowcase imgSrc={imgSrc} imgAlt={imgAlt}>
+    </div>
+</div>

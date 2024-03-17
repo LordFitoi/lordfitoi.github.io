@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import RightProjectShowcase from '../components/RightProjectShowcase.astro';
+import LeftProjectShowcase from '../components/LeftProjectShowcase.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -20,50 +22,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					showcasing my professional expertise and contributions within various domains.
 				</p>
 				<div class="flex flex-col gap-[32px] lg:gap-[60px]">
-					<div class="grow grid grid-cols-3 w-full">
-						<div class="flex flex-col items-center justify-center py-[32px] lg:py-[60px] col-span-3 lg:col-span-1">
-							<a href="https://expertsgo.com/" target="_blank">
-								<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
-									<span>Experts</span>
-									<span class="font-thin">Go</span>
-								</h3>
-							</a>
-						</div>
-						<div class="p-[20px] lg:p-[32px] rounded-l-full bg-[#FFF] col-span-3 lg:col-span-2">
-							<div class="border-[1px] border-[#EFF1F5] rounded shadow-2xl">
-								<div class="px-[16px] py-[8px] bg-[#EFF1F5]">
-									<div class="flex gap-[4px]">
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#D92D20]"></span>
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#FEC84B]"></span>
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#12B76A]"></span>
-									</div>
-								</div>
-								<img src="/images/ExpertsGo.jpeg" alt="ExpertsGo Sign Up">
-							</div>
-						</div>
-					</div>
-					<div class="grow grid grid-cols-3 w-full">
-						<div class="p-[20px] lg:p-[32px] rounded-r-full bg-[#FFF] col-span-3 lg:col-span-2 row-start-2 lg:row-start-auto">
-							<div class="border-[1px] border-[#EFF1F5] rounded shadow-2xl">
-								<div class="px-[16px] py-[8px] bg-[#EFF1F5]">
-									<div class="flex gap-[4px]">
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#D92D20]"></span>
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#FEC84B]"></span>
-										<span class="block w-[10px] h-[10px] rounded-full bg-[#12B76A]"></span>
-									</div>
-								</div>
-								<img src="/images/Film5000.jpeg" alt="ExpertsGo Sign Up">
-							</div>
-						</div>
-						<div class="flex flex-col items-center justify-center py-[32px] lg:py-[60px] col-span-3 lg:col-span-1">
-							<a href="https://www.film5000.com/" target="_blank">
-								<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
-									<span>Film</span>
-									<span class="font-thin">5000</span>
-								</h3>
-							</a>
-						</div>
-					</div>
+					<RightProjectShowcase
+						imgSrc="/images/ExpertsGo.jpeg"
+						imgAlt="ExpertsGo signup"
+					>
+						<a href="https://expertsgo.com/" target="_blank">
+							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
+								<span>Experts</span>
+								<span class="font-thin">Go</span>
+							</h3>
+						</a>
+					</RightProjectShowcase>
+					<LeftProjectShowcase
+						imgSrc="/images/Film5000.jpeg"
+						imgAlt="Film500 homepage"
+						flip={true}
+					>
+						<a href="https://www.film5000.com/" target="_blank">
+							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
+								<span>Film</span>
+								<span class="font-thin">5000</span>
+							</h3>
+						</a>
+					</LeftProjectShowcase>
 				</div>
 
 			</section>

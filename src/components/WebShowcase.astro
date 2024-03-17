@@ -1,12 +1,12 @@
 ---
 const { imgSrc, imgAlt } = Astro.props;
 ---
-<div class="border-[1px] border-[#EFF1F5] rounded shadow-2xl">
-    <div class="px-[16px] py-[8px] bg-[#EFF1F5]">
+<div class="border-[1px] border-[#EFF1F5] rounded shadow-2xl bg-[#EFF1F5]">
+    <div class="px-[8px] py-[4px] lg:px-[16px] lg:py-[8px] bg-[#EFF1F5]">
         <div class="flex gap-[4px]">
-            <span class="block w-[10px] h-[10px] rounded-full bg-[#D92D20]"></span>
-            <span class="block w-[10px] h-[10px] rounded-full bg-[#FEC84B]"></span>
-            <span class="block w-[10px] h-[10px] rounded-full bg-[#12B76A]"></span>
+            <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#12B76A]"></span>
+            <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#D92D20]"></span>
+            <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#FEC84B]"></span>
         </div>
     </div>
     <img src={imgSrc} alt={imgAlt}>

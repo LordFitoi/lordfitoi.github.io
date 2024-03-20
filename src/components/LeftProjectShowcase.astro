@@ -4,8 +4,8 @@ const { imgSrc, imgAlt } = Astro.props;
 
 ---
 
-<div class="grow grid grid-cols-3 w-full animate-on-scroll">
-    <div class="p-[20px] lg:p-[32px] rounded-r-full bg-[#FFF] col-span-3 lg:col-span-2 row-start-2 lg:row-start-auto">
+<div class="grow grid grid-cols-3 w-full">
+    <div class="p-[20px] lg:p-[32px] rounded-r-full bg-[#FFF] col-span-3 lg:col-span-2 row-start-2 lg:row-start-auto animate-on-scroll">
         <div class="animated-object">
             <WebShowcase imgSrc={imgSrc} imgAlt={imgAlt} classes="animated-object">
         </div>

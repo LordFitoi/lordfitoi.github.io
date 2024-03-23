@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-const { imgSrc, imgAlt } = Astro.props;
+const { imgSrc, imgAlt, href, imgLoading="eager" } = Astro.props;
 ---
-<div class="border-[1px] border-[#EFF1F5] rounded shadow-2xl bg-[#EFF1F5]">
-    <div class="px-[8px] py-[4px] lg:px-[16px] lg:py-[8px] bg-[#EFF1F5]">
+<a href={href} class="block max-w-max mx-auto border-[1px] border-[#DCDFEA] rounded bg-[#FFF] transition-all shadow-md hover:shadow-2xl hover:brightness-105 hover:saturate-125 cursor-pointer overflow-hidden" target="_blank">
+    <div class="px-[8px] py-[4px] lg:px-[16px] lg:py-[8px] bg-[#FFF]">
         <div class="flex gap-[4px]">
             <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#12B76A]"></span>
             <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#D92D20]"></span>
             <span class="block w-[5px] h-[5px] lg:w-[10px] lg:h-[10px] rounded-full bg-[#FEC84B]"></span>
         </div>
     </div>
-    <Image src={imgSrc} alt={imgAlt}>
-</div>
+    <Image width="875" height="547" src={imgSrc} alt={imgAlt} loading={imgLoading}>
+</a>

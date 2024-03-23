@@ -12,7 +12,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<script src="/scripts/animate-on-scroll.js" type="module"></script>
 	</head>
 	<body class="min-h-screen flex flex-col">
 		<Header />
@@ -21,12 +20,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<h2 class="text-xl lg:text-4xl text-[#FFF] text-center mb-[24px] lg:mb-[32px] px-[20px]">WORK EXPERTICE</h2>
 				<p class="text-sm lg:text-base text-[#FFF] font-thin max-w-[600px] text-center mx-auto mb-[32px] lg:mb-[60px] px-[20px]">
 					Below, you will find a selection of real projects in which I, as a skilled <b>fullstack developer</b>,
-					have actively participated, showcasing my professional expertise and contributions within various domains.
+					have participated, showcasing my professional expertise and contributions within various domains.
 				</p>
 				<div class="flex flex-col gap-[32px] lg:gap-[60px]">
 					<RightProjectShowcase
 						imgSrc="/images/ExpertsGo.jpeg"
 						imgAlt="ExpertsGo signup"
+						href="https://expertsgo.com/"
 					>
 						<a href="https://expertsgo.com/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
 							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
@@ -47,7 +47,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<LeftProjectShowcase
 						imgSrc="/images/Film5000.jpeg"
 						imgAlt="Film500 homepage"
-						flip={true}
+						href="https://www.film5000.com/"
+						imgLoading="lazy"
 					>
 						<a href="https://www.film5000.com/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
 							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
@@ -61,23 +62,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							and mantained by me, Film5000 is the personal blog of <b>Ian Anthony Brownell</b> a movie producter, and director.
 						</p>
 					</LeftProjectShowcase>
-					<!-- <Testimonial imgSrc="/images/IanBrownell.jpeg" alias="Ian Brownell, Film5000">
+					
+					<!--
+					<Testimonial imgSrc="/images/IanBrownell.jpeg" alias="Ian Brownell, Film5000">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum justo sed mauris
 						pharetra, eget sollicitudin dui rutrum. Fusce id purus sed felis aliquam tristique nec sit amet elit.
-					</Testimonial> -->
+					</Testimonial>
+					<div class="container mx-auto px-[20px]">
+						<hr class="border-[#717BBC55]">
+					</div>
+					-->
 					<RightProjectShowcase
-						imgSrc="/images/AndrosHome.jpeg"
-						imgAlt="Andros hompage"
+						imgSrc="/images/LaMare.jpeg"
+						imgAlt="LaMare hompage"
+						href="https://lamarebayharbor.com/"
+						imgLoading="lazy"
 					>
-						<a href="https://androshome.com/" target="_blank">
+						<a href="https://lamarebayharbor.com/" target="_blank" class="flex flex-col items-center text-center mb-[16px]">
 							<h3 class="text-[#FFF] flex text-xl lg:text-3xl">
-								<span>Andros</span>
-								<span class="font-thin">Home</span>
+								<span>La</span>
+								<span class="font-thin">Maré</span>
 							</h3>
 						</a>
+						<p class="text-[#FFF] font-thin inline mx-auto w-full px-[32px] text-center">
+							The oficial site of <b>La Maré Bay Harbor</b>, designed by
+							<a href="https://cosoc.co/" target="_blank" class="inline text-[#FFF] font-bold cursor-pointer">Bin Huang</a> (CEO of CO.SOC.),
+							and built by me, La Maré Bay Harbor is a luxury waterfront development in Bay Harbor Islands, Florida.
+						</p>
 					</RightProjectShowcase>
-					<!-- <Testimonial imgSrc="/images/IanBrownell.jpeg" imgAlt="Ian Brownell">
-						
+					<!-- <Testimonial  imgAlt="Bin Huang" alias="Author Name, Role/Project">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum justo sed mauris
 					</Testimonial> -->
 				</div>
 

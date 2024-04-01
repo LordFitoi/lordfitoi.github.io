@@ -23,6 +23,25 @@ const posts = (await getCollection('blog')).sort(
 				<h1 class="text-xl lg:text-5xl text-[#FFF] text-center mb-[24px] lg:mb-[32px] px-[20px]">🛠️ WORK IN PROGRESS 🛠️</h1>
 				<a href="/" class="font-thin hover:underline">← Back to homepage</a>
 			</section>
+			<!-- <section class="mx-auto container max-w-[1000px] w-full px-[20px]">
+				<ul class="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
+					{
+						posts.map((post) => (
+							<li class="group">
+								<a href={`/blog/${post.slug}/`} class="">
+									<div class="h-[250px] border-[1px] border-[#FFF5] lg:h-[360px] bg-[#000A] rounded-lg mb-[16px]">
+										<img width={720} height={360} src={post.data.heroImage} alt=""  class="w-full h-full rounded-lg object-cover" />
+									</div>
+									<h4 class="text-sm group-hover:underline">{post.data.title}</h4>
+									<p class="text-xs">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section> -->
 		</main>
 		<Footer />
 	</body>
